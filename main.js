@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ballX + BALL_RADIUS >= paddleX &&
             ballX <= paddleX + PADDLE_WIDTH) {
             ballDY = -ballDY;
-            ballY = ballY - 10
+            ballY = ballY - 5
             mySoundPaddleCol.play();
         }
     
