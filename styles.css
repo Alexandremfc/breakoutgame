@@ -1,0 +1,84 @@
+body {
+    /* background-image: url('https://img.freepik.com/free-vector/neon-landscape-background_53876-91655.jpg'); */
+    background-image: url('https://forums.libretro.com/uploads/default/original/3X/6/b/6bbd3c59e7fb9e1285e189630896a75fc181569f.png');
+        /* url('https://img.freepik.com/free-vector/pink-neon-background_53876-91656.jpg?t=st=1713869914~exp=1713870514~hmac=f6133ea2fff2c5515a7312237c9abf25034fe0520d9b6a6f75f51b20791e64cf'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #505868;
+}
+
+.game-container {
+    position: relative;
+    width: 400px;
+    height: 480px; 
+    border: 20px solid #000;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brick-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: space-around;
+}
+
+.paddle {
+    /* background-image: url('https://cms-assets.tutsplus.com/legacy-premium-tutorials/posts/13764/images/13764_133ee6bd77806b6ef7d2d1dc080a2faa.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%; */
+    position: absolute;
+    bottom: 10px;
+    left: 160px;
+    width: 90px;
+    height: 15px;
+    /* background-color: #4629af; */
+}
+
+.ball {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 15px;
+    height: 15px;
+    /* background-color: #FF4500; */
+    /* border-radius: 50%; */
+}
+
+.brick {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: #dd8c23;
+    margin: 2px;
+}
+
+.score {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.instructions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d08cd6;
+    color: #fff;
+    border: none;
+    cursor: pointer
+}

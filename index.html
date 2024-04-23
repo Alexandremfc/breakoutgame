@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <img class="paddle" id="paddle" src="https://learnopengl.com/img/in-practice/breakout/textures/paddle.png">
+        <img class="ball" id="ball" src="https://cdn-icons-png.flaticon.com/512/4964/4964811.png" >
+        <div class="brick-row" id="bricks-container"></div>
+        <div id="score" class="score">Score: 0</div>
+        <div id="instructions" class="instructions">
+            <p>Use left and right arrow keys to move the player.</p>
+            <p>Score the most points by destroying all the blocks!</p>
+            <p>Press Escape button to pause</p>
+        </div>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
