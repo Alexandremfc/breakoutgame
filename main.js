@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const instructions = document.getElementById('instructions');
     const startButton = document.getElementById('start-button');
 
-    let GAME_WIDTH = 400
-    let GAME_HEIGHT = 480;
+    let game_width = 400
+    let game_heigth = 480;
     let PADDLE_HEIGHT = 15;
     let PADDLE_WIDTH = 90;
     let BALL_RADIUS = 15 / 2;
@@ -103,11 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGameLoop() {
-        gameLoopIntervalId = setInterval(gameLoop, 1000 / 60); // 60 FPS
+        gameLoopIntervalId = setInterval(gameLoop, 1000 / 60); // 60 frames
     }
 
     function movePaddle() {
-        const deltaX = GAME_WIDTH / 50;
+        const deltaX = game_width / 50;
 
         if (pressedKeys['ArrowLeft'] && paddleX > 0) {
             paddleX -= deltaX;
@@ -137,10 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check ball collision with paddle
         mySoundPaddleCol = new sound("90s-game-ui-3-185096.mp3")
-        if (ballY + BALL_RADIUS * 2 >= GAME_HEIGHT - PADDLE_HEIGHT &&
+        if (ballY + BALL_RADIUS * 2 >= game_heigth - PADDLE_HEIGHT &&
             ballX + BALL_RADIUS >= paddleX &&
             ballX <= paddleX + PADDLE_WIDTH) {
             ballDY = -ballDY;
+            ballY = ballY - 10
             mySoundPaddleCol.play();
         }
     
@@ -167,11 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Check ball collision with walls
         
-        if (ballX <= 0 || ballX + BALL_RADIUS * 2 >= GAME_WIDTH || ballY <= 0) {
+        if (ballX <= 0 || ballX + BALL_RADIUS * 2 >= game_width || ballY <= 0) {
             ballDX = -ballDX; // Reverse ball's horizontal direction
         }
 
-        if (ballY + BALL_RADIUS >= GAME_HEIGHT) {
+        if (ballY + BALL_RADIUS >= game_heigth) {
             endGame();
         }
     }
