@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let game_heigth = 480;
     let PADDLE_HEIGHT = 15;
     let PADDLE_WIDTH = 90;
-    let BALL_RADIUS = 15 / 2;
+    let BALL_RADIUS = 15 / 2; // using center of ball
     let gameLoopIntervalId;
     let paddleX;
     let ballX, ballY;
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ballRect.top + BALL_RADIUS <= rect.bottom)
                 {
                     // Ball has collided with the brick
-                    brick.style.visibility = 'hidden'; // Hide the brick
+                    brick.style.visibility = 'hidden'; // Hide 
                     ballDY *= -1; // Reverse ball's vertical direction
                     score += 10; // Increase score
                     scoreDisplay.textContent = `Score: ${score}`; // Update score display
